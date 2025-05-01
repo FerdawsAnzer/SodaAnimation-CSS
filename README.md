@@ -22,5 +22,5 @@ This is a fun and interactive soda can animation built using **only HTML and CSS
 - Responsive layout techniques
 
 ## 📸 Demo
+![Soda Animation](https://github.com/user-attachments/assets/cf81277b-f09a-4d92-8c87-3b4761d53bfd)
 
-▶️ **Live Demo:**[ https://ferdawsanzer.github.io/SodaAnimation-CSS/ ]
