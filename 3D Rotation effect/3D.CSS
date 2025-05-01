@@ -1,0 +1,55 @@
+body{
+  background-image: url(background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner{
+  height: 100vh/*it will have the height of the screen*/;
+  overflow: hidden;
+  position: relative;
+
+}
+.banner .product {
+  /*background-color: red;*/
+  width: 500px;
+  height:500px ;
+  position: absolute;
+  bottom: 160px;
+  left: 35%;
+  /*transform: translateX(-50%);*/
+  z-index: 1;/*to insure is not overlapping by another element*/
+  transition: 0.7s;
+  --left:0px;/*declare a variable left too store a left position value of the cover image*/
+  display: flex; /* to put the 2 soda product at the same line*/
+} 
+
+.banner .product .soda{
+background:var(--url) var(--left) 0/*here this numbers represent the movement of element from let to right,top bottom*/
+, url(freepik-export-202410190703291KYz.jpeg);
+background-size: auto 100%;
+width: 280px;
+/*height: 500px;*/
+aspect-ratio: 2/4;/* is used to define the proportional relationship between the width and height of an element.This can be particularly useful for maintaining consistent dimensions for responsive design, ensuring that elements scale correctly on different screen sizes without distorting their content.*/
+background-blend-mode: multiply;
+mask-image:url(mockup.png) ;/*The mask property in CSS is used to hide parts of an element by masking or clipping the content using images or gradients. This property can create complex visual effects and animations by controlling the visibility of portions of an element.*/
+mask-size: auto 100%;
+transition: 0.7s;/*used it to make the image rotatae more smothly when we hover over the prodauct*/
+position:absolute ;/*to have the 2 product over each other */
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* responsible for the movement of the product cover to left,and the soda moving up using translatY*/
+.banner .product:hover{
+  --left:-1000px;
+   transform: translateY(-120px);
+}
+
+/* this what will change the cover of soda from red to yellow*/
+
+.banner .product .soda:nth-child(2){
+  opacity: 0;
+}
+.banner .product:hover  .soda:nth-child(2){
+ opacity: 1;
+}
